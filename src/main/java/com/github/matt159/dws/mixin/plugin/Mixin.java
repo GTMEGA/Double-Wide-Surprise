@@ -181,6 +181,7 @@ public enum Mixin implements IMixin {
     ContainerCommonBasicMachineMixin                  (COMMON, require(GREGTECH_6), "gregtech6.ContainerCommonBasicMachineMixin"),
 
     ContainerClientMixin                              (CLIENT, require(GREGTECH_6), "gregtech6.ContainerClientMixin"),
+    ContainerClientBasicMachineMixin                  (CLIENT, require(GREGTECH_6), "gregtech6.ContainerClientBasicMachineMixin"),
     //endregion
     // region TecTech Mixins
     TecTech_NEI_HandlerMixin                          (COMMON, require(TECTECH), "tectech.TecTech_NEI_HandlerMixin"),
