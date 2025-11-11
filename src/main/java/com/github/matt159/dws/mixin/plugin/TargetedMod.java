@@ -3,6 +3,7 @@ package com.github.matt159.dws.mixin.plugin;
 import com.falsepattern.lib.mixin.ITargetedMod;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.val;
 
 import java.util.function.Predicate;
 
@@ -26,7 +27,8 @@ public enum TargetedMod implements ITargetedMod {
     CODECHICKENLIB       ("CodeChickenLib"         , false , startsWith("codechicken")),
     GALACTICRAFT         ("Galacticraft"           , false , startsWith("galacticraft")),
     GARDENCORE           ("GardenCore"             , false , startsWith("gardenstuff")),
-    GREGTECH             ("GregTech"               , false , startsWith("gregtech").or(startsWith("gt5u"))),
+    GREGTECH_5U          ("GregTech 5u"            , false , startsWith("gregtech").or(startsWith("gt5u")).and(TargetedMod::isGregtech5)),
+    GREGTECH_6           ("Gregtech 6"             , true  , startsWith("gregtech").and(TargetedMod::isGregtech6)),
     INDUSTRIALCRAFT2     ("IndustrialCraft 2"      , false , startsWith("industrialcraft-2")),
     INVENTORYTWEAKS      ("InventoryTweaks"        , false , startsWith("inventorytweaks")),
     IRONCHEST            ("IronChest"              , false , startsWith("ironchest")),
@@ -44,4 +46,18 @@ public enum TargetedMod implements ITargetedMod {
     private final String modName;
     private final boolean loadInDevelopment;
     private final Predicate<String> condition;
+
+    private static boolean isGregtech5(String jarName) {
+        return getGregtechVersion(jarName).startsWith("5");
+    }
+
+    private static boolean isGregtech6(String jarName) {
+        return getGregtechVersion(jarName).startsWith("6");
+    }
+
+    private static String getGregtechVersion(String jarName) {
+        val tokens = jarName.split("(1\\.7\\.10-)");
+
+        return tokens[1];
+    }
 }

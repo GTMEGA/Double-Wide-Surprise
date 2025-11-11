@@ -40,10 +40,13 @@ repositories {
     cursemavenEX()
     modrinthEX()
     ic2EX()
+    mega()
+    horizon()
     exclusive(mavenpattern(), "com.falsepattern")
-    exclusive(mega(), "codechicken", "team.chisel", "mega", "gtmega")
-    exclusive(horizon(), "com.github.GTNewHorizons")
+//    exclusive(mega(), "codechicken", "team.chisel", "mega", "gtmega")
+//    exclusive(horizon(), "com.github.GTNewHorizons")
     exclusive(maven("usrv", "https://mvn.falsepattern.com/usrv"))
+    maven("https://gregtech.mechaenetia.com")
 }
 
 dependencies {
@@ -82,6 +85,8 @@ dependencies {
     compileOnly(deobfCurse("thaumcraft-nei-plugin-225095:2241913"))
     compileOnly(deobfCurse("forge-backpacks-59143:2268883"))
     implementation(deobfModrinth("baubles-expanded:2.2.1"))
+
+    implementation("com.gregoriust.gregtech:gregtech_1.7.10:6.17.05")
 
     // GregTech
     compileOnly("gtmega:gt5u-mc1.7.10:5.38.0-mega:dev") {
