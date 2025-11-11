@@ -79,7 +79,7 @@ public final class TextureWhitelist {
         addTextureToWhitelist("ironchest:textures/gui/steel_chest.png");
         //endregion
 
-        //region Gregtech Textures
+        //region Gregtech 5u Textures
         addTextureToWhitelist("gregtech:textures/gui/1by1.png");
         addTextureToWhitelist("gregtech:textures/gui/2by2.png");
         addTextureToWhitelist("gregtech:textures/gui/3by3.png");
@@ -212,6 +212,25 @@ public final class TextureWhitelist {
         addTextureToWhitelist("gregtech:textures/gui/multimachines/ProcessingArray.png");
         addTextureToWhitelist("gregtech:textures/gui/multimachines/PyrolyseOven.png");
         addTextureToWhitelist("gregtech:textures/gui/multimachines/VacuumFreezer.png");
+        //endregion
+        //region Gregtech 6 Textures
+        addTextureToWhitelist("gregtech:textures/gui/chests/1.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/2.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/3.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/4.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/5.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/6.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/7.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/8.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/9.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/12.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/14.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/15.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/16.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/18.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/27.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/36.png");
+        addTextureToWhitelist("gregtech:textures/gui/chests/54.png");
         //endregion
 
         // region Applied Energistics 2 Textures

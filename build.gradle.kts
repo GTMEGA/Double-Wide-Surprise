@@ -1,7 +1,6 @@
 plugins {
-    id("com.falsepattern.fpgradle-mc") version ("0.16.1")
+    id("com.falsepattern.fpgradle-mc") version ("2.2.1")
 }
-
 
 group = "matt159"
 
@@ -42,6 +41,7 @@ repositories {
     ic2EX()
     mega()
     horizon()
+    maven("venmaven", "https://mvn.ventooth.com/releases")
     exclusive(mavenpattern(), "com.falsepattern")
 //    exclusive(mega(), "codechicken", "team.chisel", "mega", "gtmega")
 //    exclusive(horizon(), "com.github.GTNewHorizons")
@@ -55,11 +55,11 @@ dependencies {
     implementation("com.falsepattern:falsepatternlib-mc1.7.10:1.6.1:dev")
 
     // Not Enough Items
-    compileOnly("codechicken:codechickencore-mc1.7.10:1.4.0-mega:dev") {
+    implementation("codechicken:codechickencore-mc1.7.10:1.4.0-mega:dev") {
         excludeDeps()
     }
 
-    compileOnly("codechicken:notenoughitems-mc1.7.10:2.1.5-gtmega:dev") {
+    implementation("codechicken:notenoughitems-mc1.7.10:2.1.5-gtmega:dev") {
         excludeDeps()
     }
 
@@ -86,7 +86,11 @@ dependencies {
     compileOnly(deobfCurse("forge-backpacks-59143:2268883"))
     implementation(deobfModrinth("baubles-expanded:2.2.1"))
 
-    implementation("com.gregoriust.gregtech:gregtech_1.7.10:6.17.05")
+    implementation("com.gregoriust.gregtech:gregtech_1.7.10:6.17.05:dev") {
+        excludeDeps()
+    }
+
+    runtimeOnlyNonPublishable("com.ventooth:venterceptor-mc1.7.10:2.0.0-rc1:dev")
 
     // GregTech
     compileOnly("gtmega:gt5u-mc1.7.10:5.38.0-mega:dev") {

@@ -25,6 +25,7 @@ import static com.github.matt159.dws.mixin.plugin.TargetedMod.FORGEBACKPACKS;
 import static com.github.matt159.dws.mixin.plugin.TargetedMod.GALACTICRAFT;
 import static com.github.matt159.dws.mixin.plugin.TargetedMod.GARDENCORE;
 import static com.github.matt159.dws.mixin.plugin.TargetedMod.GREGTECH_5U;
+import static com.github.matt159.dws.mixin.plugin.TargetedMod.GREGTECH_6;
 import static com.github.matt159.dws.mixin.plugin.TargetedMod.INDUSTRIALCRAFT2;
 import static com.github.matt159.dws.mixin.plugin.TargetedMod.INVENTORYTWEAKS;
 import static com.github.matt159.dws.mixin.plugin.TargetedMod.IRONCHEST;
@@ -133,7 +134,7 @@ public enum Mixin implements IMixin {
     ContainerIronChestMixin                           (COMMON, require(IRONCHEST), "ironchest.ContainerIronChestMixin"),
     GUIChestMixin                                     (CLIENT, require(IRONCHEST), "ironchest.GUIChestMixin"),
     //endregion
-    // region Gregtech5u Mixins
+    // region Gregtech 5u Mixins
     GT_ContainerMixin                                 (COMMON, require(GREGTECH_5U), "gregtech5u.GT_ContainerMixin"),
     GT_Container_1by1Mixin                            (COMMON, require(GREGTECH_5U), "gregtech5u.GT_Container_1by1Mixin"),
     GT_Container_2by2Mixin                            (COMMON, require(GREGTECH_5U), "gregtech5u.GT_Container_2by2Mixin"),
@@ -173,6 +174,13 @@ public enum Mixin implements IMixin {
     GT_MetaTileEntity_BasicMachineMixin               (COMMON, require(GREGTECH_5U), "gregtech5u.GT_MetaTileEntity_BasicMachineMixin"),
     //    GT_NEI_DefaultHandlerMixin                        (COMMON, require(GREGTECH),            "gregtech.GT_NEI_DefaultHandlerMixin"),
     GT_RectHandlerMixin                               (COMMON, require(GREGTECH_5U), "gregtech5u.GT_RectHandlerMixin"),
+    //endregion
+    //region Gregtech 6 Mixins
+    ContainerCommonMixin                              (COMMON, require(GREGTECH_6), "gregtech6.ContainerCommonMixin"),
+    ContainerCommonChestMixin                         (COMMON, require(GREGTECH_6), "gregtech6.ContainerCommonChestMixin"),
+    ContainerCommonBasicMachineMixin                  (COMMON, require(GREGTECH_6), "gregtech6.ContainerCommonBasicMachineMixin"),
+
+    ContainerClientMixin                              (CLIENT, require(GREGTECH_6), "gregtech6.ContainerClientMixin"),
     //endregion
     // region TecTech Mixins
     TecTech_NEI_HandlerMixin                          (COMMON, require(TECTECH), "tectech.TecTech_NEI_HandlerMixin"),
