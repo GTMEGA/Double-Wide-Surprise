@@ -28,7 +28,8 @@ public abstract class ContainerCommonMixin extends Container implements IDWSCont
 
     @Redirect(method = "addSlots",
               at = @At(value = "INVOKE",
-                       target = "Lgregapi/gui/ContainerCommon;addSlotToContainer(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;"),
+                       target = "Lgregapi/gui/ContainerCommon;addSlotToContainer(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;",
+                       remap = true),
               remap = false)
     private Slot adjustSlotXOffset(ContainerCommon instance, Slot slot) {
         slot.xDisplayPosition += Constants.GENERAL_X_OFFSET;
@@ -36,11 +37,18 @@ public abstract class ContainerCommonMixin extends Container implements IDWSCont
         return this.addSlotToContainer(slot);
     }
 
-    @ModifyConstant(method = { "getAllSlotCount", "transferStackInSlot" },
+    @ModifyConstant(method = "getAllSlotCount",
                     constant = @Constant(intValue = 36),
                     remap = false,
-                    require = 2)
-    private int modifyPlayerSlotCount(int constant) {
+                    require = 1)
+    private int modifyPlayerSlotCountA(int constant) {
+        return 72;
+    }
+
+    @ModifyConstant(method = "transferStackInSlot",
+                    constant = @Constant(intValue = 36),
+                    require = 1)
+    private int modifyPlayerSlotCountB(int constant) {
         return 72;
     }
 }

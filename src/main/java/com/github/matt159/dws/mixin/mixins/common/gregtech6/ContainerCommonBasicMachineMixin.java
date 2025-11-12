@@ -13,7 +13,9 @@ import net.minecraft.inventory.Slot;
 public abstract class ContainerCommonBasicMachineMixin extends Container {
     @Redirect(method = "addSlots",
               at = @At(value = "INVOKE",
-                       target = "Lgregapi/gui/ContainerCommonBasicMachine;addSlotToContainer(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;"),
+                       target = "Lgregapi/gui/ContainerCommonBasicMachine;addSlotToContainer(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;",
+                       remap = true),
+              remap = false,
               require = 1)
     private Slot adjustSlotXOffset(ContainerCommonBasicMachine instance, Slot slot) {
         if (slot == null) {

@@ -23,7 +23,8 @@ public abstract class ContainerClientBasicMachineMixin extends ContainerClient {
                              id = "slice"),
               at = @At(value = "INVOKE",
                        target = "Lgregapi/gui/ContainerClientBasicMachine;drawTexturedModalRect(IIIIII)V",
-                       slice = "slice"),
+                       slice = "slice",
+                       remap = true),
               remap = false,
               require = 8)
     private void adjustXOffsets(ContainerClientBasicMachine instance, int x, int y, int u, int v, int w, int h) {
