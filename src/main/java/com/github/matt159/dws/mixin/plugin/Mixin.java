@@ -173,7 +173,7 @@ public enum Mixin implements IMixin {
 
     GT_MetaTileEntity_BasicMachineMixin                (COMMON, require(GREGTECH_5U), "gregtech5u.GT_MetaTileEntity_BasicMachineMixin"),
     //    GT_NEI_DefaultHandlerMixin                         (COMMON, require(GREGTECH),            "gregtech.GT_NEI_DefaultHandlerMixin"),
-    GT_RectHandlerMixin                                (COMMON, require(GREGTECH_5U), "gregtech5u.GT_RectHandlerMixin"),
+    GT5u_GT_RectHandlerMixin                           (COMMON, require(GREGTECH_5U), "gregtech5u.GT_RectHandlerMixin"),
     //endregion
     //region Gregtech 6 Mixins
     ContainerCommonMixin                               (COMMON, require(GREGTECH_6), "gregtech6.ContainerCommonMixin"),
@@ -183,6 +183,8 @@ public enum Mixin implements IMixin {
 
     ContainerClientMixin                               (CLIENT, require(GREGTECH_6), "gregtech6.ContainerClientMixin"),
     ContainerClientBasicMachineMixin                   (CLIENT, require(GREGTECH_6), "gregtech6.ContainerClientBasicMachineMixin"),
+
+    GT6_GT_RectHandlerMixin                            (COMMON, require(GREGTECH_6), "gregtech6.GT_RectHandlerMixin"),
     //endregion
     // region TecTech Mixins
     TecTech_NEI_HandlerMixin                           (COMMON, require(TECTECH), "tectech.TecTech_NEI_HandlerMixin"),
